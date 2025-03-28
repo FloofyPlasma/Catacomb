@@ -101,7 +101,7 @@ namespace Catacomb.Entity
             }
             else
             {
-                bool moved = false;
+                bool moved = true;
 
                 if (!removed)
                 {

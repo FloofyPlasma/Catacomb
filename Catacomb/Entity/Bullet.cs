@@ -13,7 +13,7 @@ namespace Catacomb.Entity
     {
         public double xa, ya;
         public Mob.Mob owner;
-        bool hit = false;
+        protected bool hit = false;
 
         public int duration;
         protected int facing;

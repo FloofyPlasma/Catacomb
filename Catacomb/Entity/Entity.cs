@@ -239,7 +239,7 @@ namespace Catacomb.Entity
             return true;
         }
 
-        public void Remove()
+        public virtual void Remove()
         {
             removed = true;
 

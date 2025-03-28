@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Catacomb.Entity
 {
-    public class Entity : IBBOwner
+    public abstract class Entity : IBBOwner
     {
         public Level.Level level;
         public bool removed;
@@ -54,7 +54,7 @@ namespace Catacomb.Entity
 
         }
 
-        public void Tick()
+        public virtual void Tick()
         {
 
         }
@@ -69,7 +69,7 @@ namespace Catacomb.Entity
             return new BB(this, pos.x - radius.x, pos.y - radius.y, pos.x + radius.x, pos.y + radius.y);
         }
 
-        public void Render(IAbstractScreen screen)
+        public virtual void Render(IAbstractScreen screen)
         {
             // TODO: render to screen
         }
@@ -234,7 +234,7 @@ namespace Catacomb.Entity
             return isBlocking && e.isBlocking && ShouldBlock(e) && e.ShouldBlock(this);
         }
 
-        protected bool ShouldBlock(Entity e)
+        protected virtual bool ShouldBlock(Entity e)
         {
             return true;
         }
@@ -249,7 +249,7 @@ namespace Catacomb.Entity
             }
         }
 
-        public void HandleCollision(Entity entity, double xa, double ya)
+        public virtual void HandleCollision(Entity entity, double xa, double ya)
         {
             if (this.Blocks(entity))
             {
@@ -258,7 +258,7 @@ namespace Catacomb.Entity
             }
         }
 
-        public void Collide(Entity entity, double xa, double ya)
+        public virtual void Collide(Entity entity, double xa, double ya)
         {
 
         }

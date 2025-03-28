@@ -8,5 +8,6 @@ namespace Catacomb.Entity
 {
     public interface IRemoveEntityNotify
     {
+        public void RemoveEntityNotice(Entity e);
     }
 }

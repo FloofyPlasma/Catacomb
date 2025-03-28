@@ -8,5 +8,6 @@ namespace Catacomb.Math
 {
     public interface IBBOwner
     {
+        void HandleCollision(Entity.Entity entity, double xa, double ya);
     }
 }

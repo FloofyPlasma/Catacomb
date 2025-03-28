@@ -8,5 +8,6 @@ namespace Catacomb.Math
 {
     public interface IBBPredicate<T> where T : IBBOwner
     {
+        bool AppliesTo(T item, double x0, double y0, double x1, double y1);
     }
 }

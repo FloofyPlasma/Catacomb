@@ -9,5 +9,9 @@ namespace Catacomb.Entity
 {
     public class Entity : IBBOwner
     {
+        public void HandleCollision(Entity entity, double xa, double ya)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

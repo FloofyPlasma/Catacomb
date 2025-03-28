@@ -9,12 +9,12 @@ namespace Catacomb.Entity.Weapon
 {
     public interface IWeapon
     {
-        void SetOwner(Mob.Mob mob);
-        void WeaponTick();
-        void UpgradeWeapon();
-        void PrimaryFire(double xDir, double yDir);
-        Bullet GetAmmo(double xDir, double yDir);
-        public IAbstractBitmap GetSprite();
-        void SetWeaponMode();
+        abstract void SetOwner(Mob.Mob mob);
+        abstract void WeaponTick();
+        abstract void UpgradeWeapon();
+        abstract void PrimaryFire(double xDir, double yDir);
+        abstract Bullet GetAmmo(double xDir, double yDir);
+        abstract public IAbstractBitmap GetSprite();
+        abstract void SetWeaponMode();
     }
 }
